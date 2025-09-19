@@ -4,7 +4,9 @@ using namespace std;
 
 
 int main() {
-    const int size = 20;   
+
+    const int size = 20;  
+    // Replaced with Pointer array 
     int *p = new int[size];
 
 
