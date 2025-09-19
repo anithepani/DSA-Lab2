@@ -1,15 +1,26 @@
 #include <iostream>
-#include <string>
-#include <cstring>
 using namespace std;
 
 int main(){
-    string to_rev;
-    cout << "Enter the String to be reversed : ";
-    getline(cin,to_rev);
-    char* array = new char[to_rev.length() +1];
-    for(int i=to_rev.length()-1;i>=0;i--){
-        array[to_rev.length()-i] = to_rev[i];
-        cout << array[to_rev.length()-i];
+    int size;
+    cout << "Enter the Length of the String : ";
+    cin >> size;
+    cin.ignore();
+    char* array = new char[size+1];
+    cout << "Enter the String to reverse : ";
+    
+    cin.getline(array,size+1);
+    
+    int start =0;
+    int end = size-1;
+    while(start<end){
+        swap(array[start],array[end]);
+        start++;
+        end--;
     }
+    for(int i =0;i<size;i++){
+        cout << array[i];
+    }
+    
+   
 }
