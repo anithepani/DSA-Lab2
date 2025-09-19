@@ -9,6 +9,7 @@ void analyze_pointer(int *ptr){
     cout << *ptr<<endl;
 }
 int main(){
+    // Dynamic Memory Location
     int iValue_stack = 7;
     int *pointer_stack = &iValue_stack;
     analyze_pointer(pointer_stack);
